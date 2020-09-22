@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY WEBPAGE</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
         *{
             margin: 0;
@@ -386,7 +387,7 @@
                 <div class="content">
                     <h2 class="height">
                         <span class="typed"></span>
-                        <span class="cursor"></span>
+                        <!-- <span class="cursor"></span> -->
                     </h2>
                     <div class="para">I am a second year UG student in department of Civil Engineering persueing B.Tech.I like coding and am also learning web development.</div>
                 </div>
@@ -466,81 +467,98 @@
             <div class="para">All Rights Reserved.</div>
         </footer>
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
     <script>
 
-        $(document).ready(function(){
-                var x="";
-                var y="Hii,This is Ashish";
-                var i=0,g=0;
-                var cont=0;
-                var a=setInterval(function(){
+            $(function () {
+            $(".typed").typed({
+                strings:["This is Ashish", "I study at IIT KGP"],
+                typeSpeed: 70,
+                backSpeed: 20,
+                backDelay: 1500,
+                showCursor: true,
+                loop: true
+            });
+            });
+
+
+        // $(document).ready(function(){
+        //         var x="";
+        //         var y="Hii,This is Ashish";
+        //         var i=0,g=0;
+        //         var cont=0;
+        //         var a=setInterval(function(){
 
                     
-                        if(cont == 0)
-                        {
-                            x = y.slice(0,i);
-                            $(".typed").html(x);
-                            if(i == y.length )
-                                {
-                                    cont =1;
-                                }
-                            console.log(cont);
-                            i++;
-                        }
-                        else if(cont ==1)
-                        {
-                            i--;
-                            x = y.slice(0,i);
-                            $(".typed").html(x);
-                            if(i == 0)
-                            {
-                                cont = 2;
-                                y="I study at IIT KGP";
-                            }
-                        }
-                        if(cont == 2)
-                        {
-                            x = y.slice(0,i);
-                            $(".typed").html(x);
-                            if(i == y.length )
-                            {
-                                cont =3;
-                            }
-                            console.log(cont);
-                            i++;
-                        }
-                        else if(cont == 3)
-                        {
-                            i--;
-                            x = y.slice(0,i);
-                            $(".typed").html(x);
-                            if(i == 0)
-                            {
-                                cont = 0;
-                                y="Hii,This is Ashish";
-                            }
-                        }
+        //                 if(cont == 0)
+        //                 {
+        //                     x = y.slice(0,i);
+        //                     $(".typed").html(x);
+        //                     if(i == y.length )
+        //                         {
+        //                             cont =1;
+        //                         }
+        //                     console.log(cont);
+        //                     i++;
+        //                 }
+        //                 else if(cont ==1)
+        //                 {
+        //                     i--;
+        //                     x = y.slice(0,i);
+        //                     $(".typed").html(x);
+        //                     if(i == 0)
+        //                     {
+        //                         cont = 2;
+        //                         y="I study at IIT KGP";
+        //                     }
+        //                 }
+        //                 if(cont == 2)
+        //                 {
+        //                     x = y.slice(0,i);
+        //                     $(".typed").html(x);
+        //                     if(i == y.length )
+        //                     {
+        //                         cont =3;
+        //                     }
+        //                     console.log(cont);
+        //                     i++;
+        //                 }
+        //                 else if(cont == 3)
+        //                 {
+        //                     i--;
+        //                     x = y.slice(0,i);
+        //                     $(".typed").html(x);
+        //                     if(i == 0)
+        //                     {
+        //                         cont = 0;
+        //                         y="Hii,This is Ashish";
+        //                     }
+        //                 }
 
-                    },200);
+        //             },200);
 
-            });
+        //     });
 
-            $(document).ready(function(){
-                var h=0;
-                var b=setInterval(function(){
-                    if(h==0)
-                    {
-                        $(".cursor").html("_");
-                        h=1;
-                    }
-                    else{
+        //     $(document).ready(function(){
+        //         var h=0;
+        //         var b=setInterval(function(){
+        //             if(h==0)
+        //             {
+        //                 $(".cursor").html("_");
+        //                 h=1;
+        //             }
+        //             else{
                         
-                        $(".cursor").html(" ");
-                        h=0;
-                    }
+        //                 $(".cursor").html(" ");
+        //                 h=0;
+        //             }
 
-                },200);
-            });
+        //         },200);
+        //     });
 
         function openNav(){
             document.getElementById("Nav").style.width="250px";
